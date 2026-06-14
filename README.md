@@ -1,5 +1,7 @@
 # 🌍 GeoTime Voyage
 
+### ▶️ [**Prova la demo dal vivo → manzolo.github.io/GeoTimeVoyage**](https://manzolo.github.io/GeoTimeVoyage/)
+
 Un viaggio interattivo in **3D** attraverso i **4,6 miliardi di anni** di storia della Terra.
 Scorri la timeline e guarda il pianeta trasformarsi: deriva dei continenti, glaciazioni,
 livello del mare, comparsa della vita, estinzioni di massa, impatti di asteroidi.
@@ -8,7 +10,7 @@ Costruito con **React + Three.js (@react-three/fiber + drei)**, **TypeScript**, 
 personalizzati per l'atmosfera e texture della Terra **generate proceduralmente** (nessun
 asset esterno da scaricare).
 
-![tech](https://img.shields.io/badge/React-18-61dafb) ![tech](https://img.shields.io/badge/Three.js-r169-black) ![tech](https://img.shields.io/badge/TypeScript-5-blue)
+[![demo](https://img.shields.io/badge/demo-live-success)](https://manzolo.github.io/GeoTimeVoyage/) [![Deploy GitHub Pages](https://github.com/manzolo/GeoTimeVoyage/actions/workflows/deploy.yml/badge.svg)](https://github.com/manzolo/GeoTimeVoyage/actions/workflows/deploy.yml) ![tech](https://img.shields.io/badge/React-18-61dafb) ![tech](https://img.shields.io/badge/Three.js-r169-black) ![tech](https://img.shields.io/badge/TypeScript-5-blue)
 
 ## ✨ Funzionalità
 
@@ -50,14 +52,19 @@ npm run dev
 
 ## 📦 Deploy su GitHub Pages
 
-Il workflow `.github/workflows/deploy.yml` builda e pubblica automaticamente a ogni push su `main`.
+Il sito è già pubblicato qui → **https://manzolo.github.io/GeoTimeVoyage/**
 
-1. Crea un repository chiamato **`GeoTimeVoyage`** (il nome del repo viene usato come `base` Vite).
+Il workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builda e ri-pubblica
+**automaticamente a ogni push su `main`** (sorgente Pages = *GitHub Actions*).
+
+### Per replicarlo su un altro account/repo
+
+1. Crea un repository (il suo nome viene usato come `base` Vite, rilevato in automatico).
 2. In **Settings → Pages → Build and deployment**, imposta *Source* = **GitHub Actions**.
-3. Fai push su `main`: il sito sarà su `https://<utente>.github.io/GeoTimeVoyage/`.
+3. Fai push su `main`: il sito sarà su `https://<utente>.github.io/<nome-repo>/`.
 
-> Se usi un nome di repo diverso, il workflow lo rileva da solo (`VITE_BASE=/<nome-repo>/`).
-> Per il deploy manuale: `make build-static` e pubblica la cartella `dist/`.
+> Il workflow rileva il nome del repo da solo (`VITE_BASE=/<nome-repo>/`), quindi funziona
+> con qualsiasi nome. Per il deploy manuale: `make build-static` e pubblica la cartella `dist/`.
 
 ## 🗂️ Struttura
 
